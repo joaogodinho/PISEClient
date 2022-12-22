@@ -41,7 +41,7 @@ public class PiseLearner {
         InferenceClient client = new InferenceClient();
         client.setAlphabet(alphabet);
         try {
-            client.startConnection("127.0.0.1", 8080);
+            client.startConnection(args[0], 8080);
         } catch (IOException e) {
             LOGGER.warning("Failed connecting to PISEServer. Have you started one?");
             return;
